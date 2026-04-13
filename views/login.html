@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masuk - SuruhAja</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                navy: "#003040",
+                yellow: "#FCBF45",
+                teal: "#002828",
+                light: "#F8FAFC",
+                gray: "#64748B",
+              },
+            },
+            boxShadow: {
+              soft: "0 10px 40px -10px rgba(0,0,0,0.08)",
+              float: "0 20px 40px -10px rgba(0,48,64,0.15)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      /* Custom Checkbox Styling */
+      input[type="checkbox"]:checked {
+        background-color: #fcbf45;
+        border-color: #fcbf45;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-brand-navy flex">
+    <!-- Left Side: Branding / Illustration (Hidden on Mobile) -->
+    <div
+      class="hidden lg:flex w-1/2 bg-brand-navy relative overflow-hidden flex-col justify-between"
+    >
+      <!-- Abstract Shapes -->
+      <div
+        class="absolute -top-32 -left-32 w-96 h-96 bg-brand-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+      ></div>
+
+      <!-- Logo -->
+      <div
+        class="p-12 relative z-10 cursor-pointer"
+        onclick="window.location.href = '/'"
+      >
+        <a
+            href="/"
+            class="flex-shrink-0 flex items-center cursor-pointer"
+          >
+            <img
+              src="assets/images/logo/logo-white.png"
+              alt="SuruhAja"
+              class="h-10 w-auto"
+            />
+          </a>
+      </div>
+
+      <!-- Center Content -->
+      <div class="px-16 relative z-10">
+        <h1 class="text-5xl font-extrabold text-white leading-tight mb-6">
+          Masuk dan mulai <br />
+          <span class="text-brand-yellow">suruh apa aja.</span>
+        </h1>
+        <p class="text-lg text-gray-300 mb-12 max-w-md">
+          Bebasin waktumu dari hal-hal ribet. Biar mitra kami yang gerak, kamu
+          tinggal duduk manis.
+        </p>
+
+        <!-- Floating Mockup Card for Social Proof / Vibe -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl max-w-sm shadow-float transform -rotate-2 hover:rotate-0 transition-transform duration-500"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center shrink-0"
+            >
+              <i class="fa-solid fa-check text-white text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white">Tugas Selesai! 🎉</h4>
+              <p class="text-sm text-gray-300">
+                Antre tiket konser - Budi Santoso
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Minimal Footer on Left -->
+      <div class="p-12 relative z-10 text-sm text-gray-400">
+        &copy; 2026 PT Mulai Tanpa Modal.
+      </div>
+    </div>
+
+    <!-- Right Side: Login Form -->
+    <div
+      class="w-full lg:w-1/2 flex flex-col relative justify-center px-6 sm:px-12 md:px-20 lg:px-24 overflow-y-auto"
+    >
+      <!-- Mobile Logo & Back (Visible only on mobile/tablet) -->
+      <div
+        class="absolute top-6 left-6 lg:hidden flex items-center gap-2 cursor-pointer"
+        onclick="window.location.href = '/'"
+      >
+        <a
+            href="/"
+            class="flex-shrink-0 flex items-center cursor-pointer"
+          >
+            <img
+              src="assets/images/logo/logo-black.png"
+              alt="SuruhAja"
+              class="h-10 w-auto"
+            />
+          </a>
+      </div>
+
+      <!-- Form Container -->
+      <div class="w-full max-w-md mx-auto pt-20 lg:pt-0">
+        <div class="mb-10 text-center lg:text-left">
+          <h2 class="text-3xl font-extrabold mb-3">
+            Selamat Datang Kembali! 👋
+          </h2>
+          <p class="text-brand-gray font-medium">
+            Masuk untuk lanjutin kemudahanmu hari ini.
+          </p>
+        </div>
+
+        <!-- Google Login Button -->
+        <button
+          class="w-full bg-white border border-gray-200 text-brand-navy font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center gap-3 hover:bg-gray-50 hover:shadow-sm transition-all mb-6"
+        >
+          <img
+            src="https://www.svgrepo.com/show/475656/google-color.svg"
+            alt="Google"
+            class="w-5 h-5"
+          />
+          Masuk dengan Google
+        </button>
+
+        <!-- Divider -->
+        <div class="flex items-center gap-4 mb-6">
+          <div class="h-px bg-gray-200 flex-1"></div>
+          <span class="text-sm font-medium text-gray-400"
+            >Atau masuk dengan email</span
+          >
+          <div class="h-px bg-gray-200 flex-1"></div>
+        </div>
+
+        <form action="#" method="POST" class="space-y-5">
+          <!-- Email Field -->
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2"
+              >Email Address</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+              >
+                <i class="fa-regular fa-envelope text-gray-400"></i>
+              </div>
+              <input
+                type="email"
+                id="email"
+                placeholder="budi@example.com"
+                class="w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div>
+            <label for="password" class="block text-sm font-semibold mb-2"
+              >Password</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
+              >
+                <i class="fa-solid fa-lock text-gray-400"></i>
+              </div>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                class="w-full pl-11 pr-12 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all"
+                required
+              />
+              <!-- Password Toggle -->
+              <button
+                type="button"
+                id="togglePassword"
+                class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-brand-navy focus:outline-none transition-colors"
+              >
+                <i class="fa-regular fa-eye" id="eyeIcon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div class="flex items-center justify-between pt-1">
+            <label class="flex items-center gap-2 cursor-pointer group">
+              <input
+                type="checkbox"
+                class="w-4 h-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow transition-colors cursor-pointer"
+              />
+              <span
+                class="text-sm font-medium text-brand-gray group-hover:text-brand-navy transition-colors"
+                >Ingat saya</span
+              >
+            </label>
+            <a
+              href="#"
+              class="text-sm font-bold text-brand-navy hover:text-brand-yellow transition-colors"
+              >Lupa password?</a
+            >
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-4">
+            <button
+              type="submit"
+              class="w-full bg-brand-navy text-white py-4 rounded-xl font-bold text-lg hover:bg-brand-teal transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            >
+              Masuk
+            </button>
+          </div>
+        </form>
+
+        <!-- Register Redirect -->
+        <p class="text-center mt-8 text-brand-gray font-medium">
+          Belum punya akun?
+          <a
+            href="#"
+            class="text-brand-navy font-bold hover:text-brand-yellow transition-colors underline decoration-2 underline-offset-4"
+            >Daftar sekarang</a
+          >
+        </p>
+
+        <!-- Footer Links for Mobile (Visible on Mobile only as Left panel hides) -->
+        <div
+          class="mt-12 text-center text-xs text-gray-400 lg:hidden flex justify-center gap-4"
+        >
+          <a href="#" class="hover:text-brand-navy">Kebijakan Privasi</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-brand-navy">Syarat Ketentuan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for Password Toggle UX -->
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+      const eyeIcon = document.getElementById("eyeIcon");
+
+      togglePassword.addEventListener("click", function () {
+        // Toggle the type attribute
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+
+        // Toggle the icon
+        if (type === "text") {
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        }
+      });
+    </script>
+  </body>
+</html>
