@@ -17,9 +17,6 @@ app.use(express.static("public/assets"));
 
 app.use('/', mainrouter)
 app.use('/api', apirouter)
-app.use(function (req, res, next) {
-  res.status(404).sendFile(__path + '/views/404.html')
-});
 
 app.listen(PORT, () => {
   console.log(color("Server running on port " + PORT,'green'))
